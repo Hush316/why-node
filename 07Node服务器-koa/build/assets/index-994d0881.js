@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";import{o as c,c as o}from"./runtime-core.esm-bundler-e80ae98b.js";const r={};function t(n,a){return c(),o("div",null,"chat")}const f=e(r,[["render",t]]);export{f as default};

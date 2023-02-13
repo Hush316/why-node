@@ -17,7 +17,12 @@ const upload = multer({
 
 const uploadRouter = new KoaRouter({ prefix: '/upload' })
 uploadRouter.post('/avatar', upload.single('avatar'), (ctx, next) => {
+  console.log(ctx.request.file);
   ctx.body = 'avatar upload success'
+})
+uploadRouter.post('/photos', upload.array('photos'), (ctx, next) => {
+  console.log(ctx.request.files);
+  ctx.body = 'photos upload success'
 })
 app.use(uploadRouter.routes())
 app.use(uploadRouter.allowedMethods())
